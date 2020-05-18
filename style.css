@@ -74,13 +74,13 @@ table {
 =================================== */
 html {
   font-size: 10px;
-  height: 100%;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-size: 1.6rem;
+  font-weight: 400;
   color: #fff;
   text-rendering: optimizeLegibility;
   background: url("https://images.unsplash.com/photo-1572021335469-31706a17aaef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2700&q=80") no-repeat center center;
@@ -89,18 +89,18 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background: rgba(89, 66, 172, 0.8);
-  height: 100%;
   width: 100%;
+  height: 100%;
   z-index: 75;
 }
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background: rgba(255, 255, 255, 0.5);
@@ -116,50 +116,88 @@ header {
   z-index: 100;
 }
 header p {
-  font-style: italic;
   font-weight: 200;
-  text-shadow: 1px 1px 1px rgba(27, 27, 50, 0.8);
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgba(27, 27, 50, 0.75);
   font-size: 1.8rem;
+}
+
+.spacer-3 {
+  height: 30px;
+  width: 100%;
+  display: block;
 }
 
 /* Form
 =================================== */
 form label {
-  margin: 1rem 0;
-  font-size: 2rem;
+  font-size: 1.85rem;
+  margin: 0.3rem 0;
 }
 form label span {
   font-size: 1.4rem;
 }
-form input {
+form input[type=radio] {
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+}
+form input[type=radio] + label {
+  padding-left: 4px;
+}
+form input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+}
+form input[type=checkbox] + label {
+  padding-left: 4px;
+}
+form input[type=text],
+form input[type=number],
+form input[type=email],
+form select,
+form textarea {
   border-radius: 0.6rem;
   border: none;
   width: 100%;
   padding: 1.2rem;
   color: #777;
-  font-weight: 400;
-  margin-bottom: 2rem;
   outline: none;
   text-transform: capitalize;
   transition: 0.2s;
   min-height: 48px;
 }
-form input:focus {
+form input[type=text]:focus,
+form input[type=number]:focus,
+form input[type=email]:focus,
+form select:focus,
+form textarea:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(89, 66, 172, 0.8);
 }
-form label, form input {
-  display: block;
+form select option:not(:first-child) {
+  color: #333;
+}
+form p {
+  font-size: 2rem;
 }
 
 .container-form {
-  background: rgba(27, 27, 50, 0.8);
+  background: rgba(27, 27, 50, 0.75);
   border-radius: 0.6rem;
-  max-width: 991px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 4rem;
   position: relative;
   z-index: 100;
+}
+
+#emailValidation,
+#numberValidation {
+  font-size: 1.2rem;
+  color: plum;
+  display: none;
 }
 
 /* Typography
@@ -182,7 +220,6 @@ h4 {
 
 p {
   font-size: 1.6rem;
-  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -226,6 +263,25 @@ p {
   p {
     font-size: calc(1.6rem/1.1);
   }
+}
+/* Buttons
+=================================== */
+.btn {
+  font-size: 1.6rem;
+  width: 100%;
+  height: 49px;
+  background: #777;
+  color: #fff;
+  border-radius: 0.6rem;
+}
+
+.btn-green {
+  background: #37AF65;
+  color: #fff;
+}
+.btn-green:hover {
+  background: #2c8d51;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
