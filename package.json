@@ -1,0 +1,22 @@
+{
+  "name": "survey-form",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp - Survey Form",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavcieslak/surveyForm.git"
+  },
+  "author": "Pav Cieslak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavcieslak/surveyForm/issues"
+  },
+  "homepage": "https://github.com/pavcieslak/surveyForm#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0"
+  }
+}
