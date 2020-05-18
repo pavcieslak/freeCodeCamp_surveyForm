@@ -191,6 +191,25 @@ form p {
   padding: 4rem;
   position: relative;
   z-index: 100;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 768px) {
+  .container-form {
+    padding: 2rem;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  input[type=radio] + label, input[type=checkbox] + label {
+    font-size: 1.6rem;
+  }
+}
+.disclaimer {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
 #emailValidation,
@@ -224,7 +243,7 @@ p {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: calc(4.209rem/1.2);
+    font-size: calc(4.209rem/1.05);
   }
 
   h2 {
@@ -245,7 +264,7 @@ p {
 }
 @media (max-width: 768px) {
   h1 {
-    font-size: calc(4.209rem/1.4);
+    font-size: calc(4.209rem/1.6);
   }
 
   h2 {
@@ -264,6 +283,10 @@ p {
     font-size: calc(1.6rem/1.1);
   }
 }
+.nobr {
+  white-space: nowrap;
+}
+
 /* Buttons
 =================================== */
 .btn {
