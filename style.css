@@ -171,7 +171,6 @@ form textarea {
   padding: 1.2rem;
   color: #777;
   outline: none;
-  text-transform: capitalize;
   transition: 0.2s;
   min-height: 48px;
 }

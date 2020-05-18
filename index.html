@@ -24,11 +24,11 @@
         <form id="survey-form" action="#">
           
           <label id="name-label" for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="enter your name" pattern="[A-Za-z0-9]+" required>
+          <input type="text" name="name" id="name" placeholder="Enter your name" pattern="^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$" required>
           <div class="spacer-3"></div>
 
           <label id="email-label" for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          <input type="email" name="email" id="email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
           <p id="emailValidation">Please enter a valid email address</p>
           <div class="spacer-3"></div>
 
